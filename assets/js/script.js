@@ -10,6 +10,9 @@ var currentUV = document.getElementById("current-uv");
 function kelvinToCelsius(kelvin) {
   return kelvin - 273.15;
 }
+function mpsToKph(mps) {
+  return mps * 3.6;
+}
 
 function getCurrentWeather(city) {
   var queryURL =
@@ -45,7 +48,11 @@ searchForm.addEventListener("submit", function (event) {
     currentTemp.textContent =
       "Temperature: " + kelvinToCelsius(data.main.temp).toFixed(2) + "°C";
     currentWind.textContent =
-      "Wind (Bearing): " + data.wind.speed + "km/h (" + data.wind.deg + "°)";
+      "Wind (Bearing): " +
+      mpsToKph(data.wind.speed).toFixed(1) +
+      "km/h (" +
+      data.wind.deg +
+      "°)";
     currentHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 
     getUVI(data.coord.lat, data.coord.lon).then(function (data) {
