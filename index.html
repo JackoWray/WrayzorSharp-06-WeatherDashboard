@@ -13,9 +13,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
     <section class="container">
       <div class="row">
         <div class="col-3">
@@ -36,15 +43,64 @@
               <p><span id="current-temp"></span></p>
               <p><span id="current-wind"></span></p>
               <p><span id="current-humidity"></span></p>
-              <p><span id="current-uv"></span></p>
+              <p>
+                <span id="current-uv-heading"></span
+                ><span id="current-uv"></span>
+              </p>
             </div>
           </div>
           <div class="row">
-            <div class="col" id="day-1-weather"></div>
-            <div class="col" id="day-2-weather"></div>
-            <div class="col" id="day-3-weather"></div>
-            <div class="col" id="day-4-weather"></div>
-            <div class="col" id="day-5-weather"></div>
+            <h2><span id="heading"></span></h2>
+            <div class="col" id="day-1-weather">
+              <p>
+                <span id="date-1"></span>
+                <span><img src="" alt="" id="icon-1" /></span>
+              </p>
+              <p><span id="min-temp-1"></span></p>
+              <p><span id="max-temp-1"></span></p>
+              <p><span id="wind-1"></span></p>
+              <p><span id="humidity-1"></span></p>
+            </div>
+            <div class="col" id="day-2-weather">
+              <p>
+                <span id="date-2"></span>
+                <span><img src="" alt="" id="icon-2" /></span>
+              </p>
+              <p><span id="min-temp-2"></span></p>
+              <p><span id="max-temp-2"></span></p>
+              <p><span id="wind-2"></span></p>
+              <p><span id="humidity-2"></span></p>
+            </div>
+            <div class="col" id="day-3-weather">
+              <p>
+                <span id="date-3"></span>
+                <span><img src="" alt="" id="icon-3" /></span>
+              </p>
+              <p><span id="min-temp-3"></span></p>
+              <p><span id="max-temp-3"></span></p>
+              <p><span id="wind-3"></span></p>
+              <p><span id="humidity-3"></span></p>
+            </div>
+            <div class="col" id="day-4-weather">
+              <p>
+                <span id="date-4"></span>
+                <span><img src="" alt="" id="icon-4" /></span>
+              </p>
+              <p><span id="min-temp-4"></span></p>
+              <p><span id="max-temp-4"></span></p>
+              <p><span id="wind-4"></span></p>
+              <p><span id="humidity-4"></span></p>
+            </div>
+            <div class="col" id="day-5-weather">
+              <p>
+                <span id="date-5"></span>
+                <span><img src="" alt="" id="icon-5" /></span>
+              </p>
+              <p><span id="min-temp-5"></span></p>
+              <p><span id="max-temp-5"></span></p>
+              <p><span id="wind-5"></span></p>
+              <p><span id="humidity-5"></span></p>
+            </div>
           </div>
         </div>
       </div>
